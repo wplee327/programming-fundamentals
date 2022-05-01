@@ -1,5 +1,5 @@
 Namespace Global.Mathematics
-    public Class Calculator
+    Class Calculator
         Function Addition(a As Integer, b As Integer) As Integer
             return a + b
         End Function
