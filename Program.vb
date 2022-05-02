@@ -52,19 +52,19 @@ Module Program
     Sub Arrays()
         Dim inputArray() As Integer = {1, 2, 3, 4, 5} ' Create a variable named inputArray that contains an array of integers from 1-5.
         Dim fizzBuzzArray() As Integer = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15} ' Create a variable named fizzBuzzArray taht contains an array of integers from 1-15.
-        Dim inputString As String = "This is my input string"
+        Dim inputString As String ' Create a variable named inputString to hold the string to be reversed.
 
-        Dim challenge As New Practice.CodingChallenges
+        Dim challenge As New Practice.CodingChallenges ' Create a CodingChallenges object to call its methods.
 
-        Console.Write("Input Array: ")
+        Console.Write("Input Array: ") ' Print out the starting array.
         For Each arrayElement As Integer In inputArray
             Console.Write($"{arrayElement} ")
         Next
             Console.WriteLine()
 
-        Dim outputArray() As Integer = challenge.ReverseArray(inputArray)
+        Dim outputArray() As Integer = challenge.ReverseArray(inputArray) ' Call the ReverseArray method and assign its output to the variable named outputArray.
 
-        Console.Write("Output Array: ")
+        Console.Write("Output Array: ") ' Print out the array after it has been reversed.
         For Each arrayElement As Integer In outputArray
             Console.Write($"{arrayElement} ")
         Next
@@ -72,11 +72,12 @@ Module Program
         
         Console.WriteLine("----------")
 
-        Console.WriteLine($"Input String: {inputString}")
-        Console.WriteLine(challenge.ReverseArray(inputString))
+        Console.WriteLine($"Please input a string to be reversed: ") ' Ask for a string.
+        inputString = Console.ReadLine() ' Read the user input and assign it to the variable named inputString.
+        Console.WriteLine(challenge.ReverseString(inputString)) ' Call the ReverseString method and print out its output.
 
         Console.WriteLine("----------")
 
-        challenge.FizzBuzz(fizzBuzzArray)
+        challenge.FizzBuzz(fizzBuzzArray) ' Call the FizzBuzz method and pass the array of integers to it.
     End Sub
 End Module

@@ -18,7 +18,7 @@ Namespace Global.Practice ' Create a namespace named Practice to contain our cod
 
         Function ReverseString(inputString As String) As String ' Create a function named ReverseString that accepts a string and returns a string.
             Dim charArray() As Char = inputString.ToCharArray() ' Create a variable named charArray that is an array of characters, convert the string inputString into an array of characters, and assign it to charArray.
-            return ReverseArray(charArray).ToString() ' Call the function ReverseArray, passing the array of characters charArray to it, and return the result.
+            return New String(ReverseArray(charArray)) ' Call the function ReverseArray, passing the array of characters charArray to it, and return the result.
         End Function
 
         Sub FizzBuzz(inputArray() As Integer) ' Create a sub named FizzBuzz that accepts an array of integers.
