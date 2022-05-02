@@ -1,6 +1,6 @@
 Imports System
-imports Mathematics
-Imports Practice
+imports Mathematics ' Import the Mathematics namespace.
+Imports Practice ' Import the Practice namespace.
 
 Module Program
     Sub Main(args As String())
