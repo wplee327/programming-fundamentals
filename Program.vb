@@ -4,14 +4,13 @@ Imports Practice
 
 Module Program
     Sub Main(args As String())
-        Dim validArgs() As String() = {"calc", "arrays", "help"} ' Create a variable named validArgs that contains all the valid arguments that can be passed to the program.
         If (args.Length > 0) Then ' Check if any arguments have been passed to the program.
             If (args(0) = "calc") Then ' If the calc argument is passed, then run the Calc method.
                 Calc()
             ElseIf (args(0) = "arrays") Then ' If the arrays argument is passed, then run the Arrays method.
                 Arrays()
             ElseIf (args(0) = "help") Then ' If the help argument is passed, print the help text.
-                Console.WriteLine("")
+                Console.WriteLine($"help{vbTab}Display the help text.{vbCrLf}calc{vbTab}Start the calculator.{vbCrLf}arrays{vbTab}Start the arrays demonstration.")
             End If
         Else
             Console.WriteLine("No arguments detected. Try 'dotnet run help' to display help text.") ' Suggest using the help argument if no arguments are entered.
